@@ -1,6 +1,6 @@
 using System.Collections;
 using UnityEngine;
-public enum Direction { Up, Down, Left, Right }
+
 [RequireComponent(typeof(Animator))]
 [RequireComponent(typeof(SpriteRenderer))]
 public class GridMover : MonoBehaviour
