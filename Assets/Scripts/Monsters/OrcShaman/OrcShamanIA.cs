@@ -13,19 +13,19 @@ public class OrcShamanIA : MonoBehaviour
     public float maxWaitTime = 3f;
 
     [Header("Detección")]
-    public float detectionDistance = 6f;   // a partir de aquí "nota" al jugador
+    public float detectionDistance = 6f;
 
     [Header("Rango de hechizo")]
-    public float minCastDistance = 2.5f;   // si el jugador está MÁS cerca que esto, retrocede
-    public float maxCastDistance = 4.5f;   // si está MÁS lejos que esto, se acerca
-    // Entre minCastDistance y maxCastDistance = "zona cómoda", se queda y lanza hechizos
+    public float minCastDistance = 2.5f;
+    public float maxCastDistance = 4.5f;
 
     [Header("Movimiento")]
-    public int repositionSteps = 1;        // pasos por reposicionamiento (acercar/alejar)
+    public int repositionSteps = 1;
     public float stepDelay = 0.05f;
 
     [Header("Ataque")]
     public float attackCooldown = 2f;
+    public float attackDamage = 20f;
 
     [Header("Vida")]
     public int maxHealth = 2;
@@ -48,9 +48,7 @@ public class OrcShamanIA : MonoBehaviour
 
         currentHealth -= amount;
         if (currentHealth <= 0)
-        {
             Die();
-        }
     }
 
     void Die()
@@ -70,7 +68,6 @@ public class OrcShamanIA : MonoBehaviour
                 ? Vector2.Distance(transform.position, player.position)
                 : Mathf.Infinity;
 
-            // Jugador fuera de rango de detección -> idle/wander
             if (dist > detectionDistance)
             {
                 float wait = Random.Range(minWaitTime, maxWaitTime);
@@ -86,27 +83,40 @@ public class OrcShamanIA : MonoBehaviour
                 continue;
             }
 
-            // Jugador demasiado cerca -> retroceder
             if (dist < minCastDistance)
             {
                 yield return StartCoroutine(RepositionRoutine(awayFromPlayer: true));
                 continue;
             }
 
-            // Jugador demasiado lejos -> acercarse un poco
             if (dist > maxCastDistance)
             {
                 yield return StartCoroutine(RepositionRoutine(awayFromPlayer: false));
                 continue;
             }
 
-            // Está en la "zona cómoda" -> lanza hechizo
             FaceTowardsPlayer();
             if (Time.time - lastAttackTime >= attackCooldown && !mover.IsMoving)
             {
                 lastAttackTime = Time.time;
                 bool attackDone = false;
-                mover.PlayAttack(() => attackDone = true);
+
+                mover.PlayAttack(() =>
+                {
+                    attackDone = true;
+
+                    if (player != null)
+                    {
+                        float currentDist = Vector2.Distance(transform.position, player.position);
+                        if (currentDist <= maxCastDistance)
+                        {
+                            PlayerHealth health = player.GetComponent<PlayerHealth>();
+                            if (health != null)
+                                health.TakeDamage((int)attackDamage);
+                        }
+                    }
+                });
+
                 while (!attackDone) yield return null;
             }
             else
@@ -124,7 +134,6 @@ public class OrcShamanIA : MonoBehaviour
 
             float dist = Vector2.Distance(transform.position, player.position);
 
-            // Revalida condición en cada paso (puede que ya esté en zona cómoda)
             if (awayFromPlayer && dist >= minCastDistance) break;
             if (!awayFromPlayer && dist <= maxCastDistance) break;
 
@@ -145,7 +154,6 @@ public class OrcShamanIA : MonoBehaviour
             }
             else
             {
-                // Bloqueado, no insistas más este frame
                 yield return new WaitForSeconds(0.2f);
                 break;
             }
@@ -171,12 +179,10 @@ public class OrcShamanIA : MonoBehaviour
             transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
     }
 
-    // Si awayFromPlayer=true, devuelve direcciones priorizando ALEJARSE del jugador.
-    // Si es false, prioriza ACERCARSE.
     List<Direction> GetDirectionsOrdered(bool awayFromPlayer)
     {
         Vector2 toward = (Vector2)player.position - (Vector2)transform.position;
-        if (awayFromPlayer) toward = -toward; // invertimos para alejarnos
+        if (awayFromPlayer) toward = -toward;
 
         Direction primary, secondary;
         if (Mathf.Abs(toward.x) > Mathf.Abs(toward.y))
@@ -190,7 +196,6 @@ public class OrcShamanIA : MonoBehaviour
             secondary = toward.x > 0 ? Direction.Right : Direction.Left;
         }
 
-        // Al alejarse, también miramos hacia el jugador para mantener orientación de cara
         if (awayFromPlayer) FaceTowardsPlayer();
 
         return new List<Direction>

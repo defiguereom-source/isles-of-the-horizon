@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2181303429352568865}
   m_Layer: 3
   m_Name: OrcShaman
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +157,8 @@ MonoBehaviour:
   repositionSteps: 1
   stepDelay: 0.05
   attackCooldown: 1.5
-  maxHealth: 2
+  attackDamage: 20
+  maxHealth: 90
 --- !u!61 &2181303429352568865
 BoxCollider2D:
   m_ObjectHideFlags: 0
