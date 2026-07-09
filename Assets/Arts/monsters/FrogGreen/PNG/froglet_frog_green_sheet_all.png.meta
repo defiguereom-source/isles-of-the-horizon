@@ -1,0 +1,1911 @@
+fileFormatVersion: 2
+guid: 59cf4963d9116cc4eb4be743d0fffe86
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7037078537458576890
+    second: froglet_frog_green_sheet_all_0
+  - first:
+      213: -5922015709020287754
+    second: froglet_frog_green_sheet_all_1
+  - first:
+      213: -4124503763388260752
+    second: froglet_frog_green_sheet_all_2
+  - first:
+      213: -7059561520115181779
+    second: froglet_frog_green_sheet_all_3
+  - first:
+      213: -8260043478414245230
+    second: froglet_frog_green_sheet_all_4
+  - first:
+      213: 830121891437207502
+    second: froglet_frog_green_sheet_all_5
+  - first:
+      213: -2180478533402604191
+    second: froglet_frog_green_sheet_all_6
+  - first:
+      213: 2213723422032677540
+    second: froglet_frog_green_sheet_all_7
+  - first:
+      213: 6128062753951155293
+    second: froglet_frog_green_sheet_all_8
+  - first:
+      213: 4702609056421585353
+    second: froglet_frog_green_sheet_all_9
+  - first:
+      213: 4978293562447849417
+    second: froglet_frog_green_sheet_all_10
+  - first:
+      213: -5879548696575264688
+    second: froglet_frog_green_sheet_all_11
+  - first:
+      213: -965894593336343016
+    second: froglet_frog_green_sheet_all_12
+  - first:
+      213: -1607823895604708205
+    second: froglet_frog_green_sheet_all_13
+  - first:
+      213: 298354188001958706
+    second: froglet_frog_green_sheet_all_14
+  - first:
+      213: 8092405653172389594
+    second: froglet_frog_green_sheet_all_15
+  - first:
+      213: 7256379332650723720
+    second: froglet_frog_green_sheet_all_16
+  - first:
+      213: 1000809220522082154
+    second: froglet_frog_green_sheet_all_17
+  - first:
+      213: 6003547845578741676
+    second: froglet_frog_green_sheet_all_18
+  - first:
+      213: -3750767603183117096
+    second: froglet_frog_green_sheet_all_19
+  - first:
+      213: -2075345808193377960
+    second: froglet_frog_green_sheet_all_20
+  - first:
+      213: 1260476345413978502
+    second: froglet_frog_green_sheet_all_21
+  - first:
+      213: -3890818801509156682
+    second: froglet_frog_green_sheet_all_22
+  - first:
+      213: -9132104266643541079
+    second: froglet_frog_green_sheet_all_23
+  - first:
+      213: 2878570691856359150
+    second: froglet_frog_green_sheet_all_24
+  - first:
+      213: 8304146079169967448
+    second: froglet_frog_green_sheet_all_25
+  - first:
+      213: 5764216083794352669
+    second: froglet_frog_green_sheet_all_26
+  - first:
+      213: 234895337166281716
+    second: froglet_frog_green_sheet_all_27
+  - first:
+      213: 4716740637872234920
+    second: froglet_frog_green_sheet_all_28
+  - first:
+      213: 2863410693510896078
+    second: froglet_frog_green_sheet_all_29
+  - first:
+      213: -472983752495641015
+    second: froglet_frog_green_sheet_all_30
+  - first:
+      213: -7660150102442145785
+    second: froglet_frog_green_sheet_all_31
+  - first:
+      213: 2596550682260026899
+    second: froglet_frog_green_sheet_all_32
+  - first:
+      213: -7967302926061005995
+    second: froglet_frog_green_sheet_all_33
+  - first:
+      213: -3285538103038963847
+    second: froglet_frog_green_sheet_all_34
+  - first:
+      213: 1786395609993974254
+    second: froglet_frog_green_sheet_all_35
+  - first:
+      213: 244882852117125306
+    second: froglet_frog_green_sheet_all_36
+  - first:
+      213: 1272270598040506694
+    second: froglet_frog_green_sheet_all_37
+  - first:
+      213: 7677821967793281759
+    second: froglet_frog_green_sheet_all_38
+  - first:
+      213: -5704303296923541728
+    second: froglet_frog_green_sheet_all_39
+  - first:
+      213: 6539867351858436072
+    second: froglet_frog_green_sheet_all_40
+  - first:
+      213: -804556535955354139
+    second: froglet_frog_green_sheet_all_41
+  - first:
+      213: 7529578358188370428
+    second: froglet_frog_green_sheet_all_42
+  - first:
+      213: 125542827664077579
+    second: froglet_frog_green_sheet_all_43
+  - first:
+      213: 5293346739854876460
+    second: froglet_frog_green_sheet_all_44
+  - first:
+      213: 1571927535986571895
+    second: froglet_frog_green_sheet_all_45
+  - first:
+      213: -3046438804071510486
+    second: froglet_frog_green_sheet_all_46
+  - first:
+      213: 5848346126410559287
+    second: froglet_frog_green_sheet_all_47
+  - first:
+      213: 4322842629542400055
+    second: froglet_frog_green_sheet_all_48
+  - first:
+      213: 1938475996437121127
+    second: froglet_frog_green_sheet_all_49
+  - first:
+      213: 4640585936163329146
+    second: froglet_frog_green_sheet_all_50
+  - first:
+      213: -3496876056204263099
+    second: froglet_frog_green_sheet_all_51
+  - first:
+      213: 6171278584701287715
+    second: froglet_frog_green_sheet_all_52
+  - first:
+      213: 5918068027245567103
+    second: froglet_frog_green_sheet_all_53
+  - first:
+      213: 514843402495768331
+    second: froglet_frog_green_sheet_all_54
+  - first:
+      213: 3966914804495655195
+    second: froglet_frog_green_sheet_all_55
+  - first:
+      213: -5097391930716493915
+    second: froglet_frog_green_sheet_all_56
+  - first:
+      213: -2641686446361418472
+    second: froglet_frog_green_sheet_all_57
+  - first:
+      213: -5535703421223449166
+    second: froglet_frog_green_sheet_all_58
+  - first:
+      213: 2389415099448004175
+    second: froglet_frog_green_sheet_all_59
+  - first:
+      213: 3999233762074076320
+    second: froglet_frog_green_sheet_all_60
+  - first:
+      213: -7013242104019097553
+    second: froglet_frog_green_sheet_all_61
+  - first:
+      213: 7195249806219421732
+    second: froglet_frog_green_sheet_all_62
+  - first:
+      213: -7713908310760148704
+    second: froglet_frog_green_sheet_all_63
+  - first:
+      213: 7368361103473974075
+    second: froglet_frog_green_sheet_all_64
+  - first:
+      213: -2061223642087628530
+    second: froglet_frog_green_sheet_all_65
+  - first:
+      213: -6874921280701796387
+    second: froglet_frog_green_sheet_all_66
+  - first:
+      213: -1721126881478037892
+    second: froglet_frog_green_sheet_all_67
+  - first:
+      213: 1383169037287996094
+    second: froglet_frog_green_sheet_all_68
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 127
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: afd6eb155a9b8a160800000000000000
+      internalID: 7037078537458576890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_1
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 127
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fc009db616c0dda0800000000000000
+      internalID: -5922015709020287754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_2
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 127
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07e1b740ea1d2c6c0800000000000000
+      internalID: -4124503763388260752
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_3
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 127
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d27948b5336670e90800000000000000
+      internalID: -7059561520115181779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_4
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 127
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 29246df483e6e5d80800000000000000
+      internalID: -8260043478414245230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_5
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 127
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ecfd36b467f258b00800000000000000
+      internalID: 830121891437207502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_6
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 127
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16d4c2893526db1e0800000000000000
+      internalID: -2180478533402604191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_7
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 127
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4aa483939b9b8be10800000000000000
+      internalID: 2213723422032677540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 111
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d548f8a5b904b0550800000000000000
+      internalID: 6128062753951155293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_9
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 111
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c12b857506034140800000000000000
+      internalID: 4702609056421585353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_10
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 111
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c761517e93761540800000000000000
+      internalID: 4978293562447849417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_11
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 111
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05835059c95a76ea0800000000000000
+      internalID: -5879548696575264688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_12
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 111
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81687b12cf37892f0800000000000000
+      internalID: -965894593336343016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_13
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 113
+        width: 50
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 39cb8118facdfa9e0800000000000000
+      internalID: -1607823895604708205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_14
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 111
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23b5b11ad87f32400800000000000000
+      internalID: 298354188001958706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_15
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 111
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad604bfe0100e4070800000000000000
+      internalID: 8092405653172389594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_16
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 111
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 889e12e9e86d3b460800000000000000
+      internalID: 7256379332650723720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_17
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 95
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a6f772dfea693ed00800000000000000
+      internalID: 1000809220522082154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_18
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 95
+        width: 18
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca758c715f2e05350800000000000000
+      internalID: 6003547845578741676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_19
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 97
+        width: 50
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dc1a31ccb892fbc0800000000000000
+      internalID: -3750767603183117096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_20
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 79
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 859a98cabf3e233e0800000000000000
+      internalID: -2075345808193377960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_21
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 79
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 689ce20de8c1e7110800000000000000
+      internalID: 1260476345413978502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_22
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 79
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b8b2aa1ae8010ac0800000000000000
+      internalID: -3890818801509156682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_23
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 79
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a3f1eead8f344180800000000000000
+      internalID: -9132104266643541079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_24
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 79
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eeed2fcfaccb2f720800000000000000
+      internalID: 2878570691856359150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_25
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 79
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 855f0eb9cd04e3370800000000000000
+      internalID: 8304146079169967448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_26
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 79
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1ad723fcfb9eff40800000000000000
+      internalID: 5764216083794352669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_27
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 79
+        width: 16
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fb113b8014824300800000000000000
+      internalID: 234895337166281716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_28
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 63
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a1260aae9a357140800000000000000
+      internalID: 4716740637872234920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_29
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 63
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec995c0dad0ecb720800000000000000
+      internalID: 2863410693510896078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_30
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 63
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94e47f778cf9f69f0800000000000000
+      internalID: -472983752495641015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_31
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 63
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70883c9211ea1b590800000000000000
+      internalID: -7660150102442145785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_32
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 63
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3163861a61dc80420800000000000000
+      internalID: 2596550682260026899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_33
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 63
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 553143a83347e6190800000000000000
+      internalID: -7967302926061005995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_34
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 63
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97f0a58b08c6762d0800000000000000
+      internalID: -3285538103038963847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_35
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 63
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee11202b75d8ac810800000000000000
+      internalID: 1786395609993974254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_36
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 63
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ab8960418aff56300800000000000000
+      internalID: 244882852117125306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_37
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 63
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 641d06e3e5308a110800000000000000
+      internalID: 1272270598040506694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_38
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 63
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fda520f966a1d8a60800000000000000
+      internalID: 7677821967793281759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_39
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 47
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 02f58c7cf5e36d0b0800000000000000
+      internalID: -5704303296923541728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_40
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 47
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e752b1f4b642ca50800000000000000
+      internalID: 6539867351858436072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_41
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 47
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ed89a0e714a5d4f0800000000000000
+      internalID: -804556535955354139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_42
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 47
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cf969449f9f6e7860800000000000000
+      internalID: 7529578358188370428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_43
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 31
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b03f30f59840eb100800000000000000
+      internalID: 125542827664077579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_44
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 31
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c2f950680deb57940800000000000000
+      internalID: 5293346739854876460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_45
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 31
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77a722bf3cb90d510800000000000000
+      internalID: 1571927535986571895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_46
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 31
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a2e0a556c00e8b5d0800000000000000
+      internalID: -3046438804071510486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_47
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 31
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73fab3ce0df792150800000000000000
+      internalID: 5848346126410559287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_48
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 31
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7305ac9d772ddfb30800000000000000
+      internalID: 4322842629542400055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_49
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 31
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7688145f5a9d6ea10800000000000000
+      internalID: 1938475996437121127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_50
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 31
+        width: 17
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7450b2725ca66040800000000000000
+      internalID: 4640585936163329146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_51
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 31
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 541406e01c9987fc0800000000000000
+      internalID: -3496876056204263099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_52
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 31
+        width: 14
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32d781b0d29c4a550800000000000000
+      internalID: 6171278584701287715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_53
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 31
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f7c9198f383312250800000000000000
+      internalID: 5918068027245567103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_54
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 15
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b07b6b8c857152700800000000000000
+      internalID: 514843402495768331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_55
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 15
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b11a3304fff4d0730800000000000000
+      internalID: 3966914804495655195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_56
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 0
+        width: 15
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a763b0db0d6249b0800000000000000
+      internalID: -5097391930716493915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_57
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 3
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815e9ac5c28d65bd0800000000000000
+      internalID: -2641686446361418472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_58
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 15
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bdcf0c511b3d23b0800000000000000
+      internalID: -5535703421223449166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_59
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 2
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4e8d8f8f58e82120800000000000000
+      internalID: 2389415099448004175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_60
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 15
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a4ac22fae1208730800000000000000
+      internalID: 3999233762074076320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_61
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 15
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f28e022d675fbae90800000000000000
+      internalID: -7013242104019097553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_62
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 15
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 42828e1a399aad360800000000000000
+      internalID: 7195249806219421732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_63
+      rect:
+        serializedVersion: 2
+        x: 113
+        y: 15
+        width: 15
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 021353be241b2f490800000000000000
+      internalID: -7713908310760148704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_64
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 0
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b3b1f55626da14660800000000000000
+      internalID: 7368361103473974075
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_65
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 0
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e01eab2b4001563e0800000000000000
+      internalID: -2061223642087628530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_66
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ddfeef4258f5790a0800000000000000
+      internalID: -6874921280701796387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_67
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c7e202068345d18e0800000000000000
+      internalID: -1721126881478037892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: froglet_frog_green_sheet_all_68
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 0
+        width: 15
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebabedb39e0023310800000000000000
+      internalID: 1383169037287996094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      froglet_frog_green_sheet_all_0: 7037078537458576890
+      froglet_frog_green_sheet_all_1: -5922015709020287754
+      froglet_frog_green_sheet_all_10: 4978293562447849417
+      froglet_frog_green_sheet_all_11: -5879548696575264688
+      froglet_frog_green_sheet_all_12: -965894593336343016
+      froglet_frog_green_sheet_all_13: -1607823895604708205
+      froglet_frog_green_sheet_all_14: 298354188001958706
+      froglet_frog_green_sheet_all_15: 8092405653172389594
+      froglet_frog_green_sheet_all_16: 7256379332650723720
+      froglet_frog_green_sheet_all_17: 1000809220522082154
+      froglet_frog_green_sheet_all_18: 6003547845578741676
+      froglet_frog_green_sheet_all_19: -3750767603183117096
+      froglet_frog_green_sheet_all_2: -4124503763388260752
+      froglet_frog_green_sheet_all_20: -2075345808193377960
+      froglet_frog_green_sheet_all_21: 1260476345413978502
+      froglet_frog_green_sheet_all_22: -3890818801509156682
+      froglet_frog_green_sheet_all_23: -9132104266643541079
+      froglet_frog_green_sheet_all_24: 2878570691856359150
+      froglet_frog_green_sheet_all_25: 8304146079169967448
+      froglet_frog_green_sheet_all_26: 5764216083794352669
+      froglet_frog_green_sheet_all_27: 234895337166281716
+      froglet_frog_green_sheet_all_28: 4716740637872234920
+      froglet_frog_green_sheet_all_29: 2863410693510896078
+      froglet_frog_green_sheet_all_3: -7059561520115181779
+      froglet_frog_green_sheet_all_30: -472983752495641015
+      froglet_frog_green_sheet_all_31: -7660150102442145785
+      froglet_frog_green_sheet_all_32: 2596550682260026899
+      froglet_frog_green_sheet_all_33: -7967302926061005995
+      froglet_frog_green_sheet_all_34: -3285538103038963847
+      froglet_frog_green_sheet_all_35: 1786395609993974254
+      froglet_frog_green_sheet_all_36: 244882852117125306
+      froglet_frog_green_sheet_all_37: 1272270598040506694
+      froglet_frog_green_sheet_all_38: 7677821967793281759
+      froglet_frog_green_sheet_all_39: -5704303296923541728
+      froglet_frog_green_sheet_all_4: -8260043478414245230
+      froglet_frog_green_sheet_all_40: 6539867351858436072
+      froglet_frog_green_sheet_all_41: -804556535955354139
+      froglet_frog_green_sheet_all_42: 7529578358188370428
+      froglet_frog_green_sheet_all_43: 125542827664077579
+      froglet_frog_green_sheet_all_44: 5293346739854876460
+      froglet_frog_green_sheet_all_45: 1571927535986571895
+      froglet_frog_green_sheet_all_46: -3046438804071510486
+      froglet_frog_green_sheet_all_47: 5848346126410559287
+      froglet_frog_green_sheet_all_48: 4322842629542400055
+      froglet_frog_green_sheet_all_49: 1938475996437121127
+      froglet_frog_green_sheet_all_5: 830121891437207502
+      froglet_frog_green_sheet_all_50: 4640585936163329146
+      froglet_frog_green_sheet_all_51: -3496876056204263099
+      froglet_frog_green_sheet_all_52: 6171278584701287715
+      froglet_frog_green_sheet_all_53: 5918068027245567103
+      froglet_frog_green_sheet_all_54: 514843402495768331
+      froglet_frog_green_sheet_all_55: 3966914804495655195
+      froglet_frog_green_sheet_all_56: -5097391930716493915
+      froglet_frog_green_sheet_all_57: -2641686446361418472
+      froglet_frog_green_sheet_all_58: -5535703421223449166
+      froglet_frog_green_sheet_all_59: 2389415099448004175
+      froglet_frog_green_sheet_all_6: -2180478533402604191
+      froglet_frog_green_sheet_all_60: 3999233762074076320
+      froglet_frog_green_sheet_all_61: -7013242104019097553
+      froglet_frog_green_sheet_all_62: 7195249806219421732
+      froglet_frog_green_sheet_all_63: -7713908310760148704
+      froglet_frog_green_sheet_all_64: 7368361103473974075
+      froglet_frog_green_sheet_all_65: -2061223642087628530
+      froglet_frog_green_sheet_all_66: -6874921280701796387
+      froglet_frog_green_sheet_all_67: -1721126881478037892
+      froglet_frog_green_sheet_all_68: 1383169037287996094
+      froglet_frog_green_sheet_all_7: 2213723422032677540
+      froglet_frog_green_sheet_all_8: 6128062753951155293
+      froglet_frog_green_sheet_all_9: 4702609056421585353
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

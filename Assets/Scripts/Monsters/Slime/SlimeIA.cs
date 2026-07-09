@@ -2,43 +2,45 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(GridMoverSnake))]
-public class SnakeIA : MonoBehaviour
+[RequireComponent(typeof(GridMoverSlime))]
+public class SlimeIA : MonoBehaviour
 {
     [Header("Referencias")]
     public Transform player;
 
     [Header("Vida")]
-    public int maxHealth = 30;
-    public float deathDelay = 0.15f; // tiempo antes de destruir el objeto (para animación/efecto si querés)
+    public int maxHealth = 15;
+    [Tooltip("Duración de la animación Slime_Dead. Se espera ese tiempo antes de destruir el objeto.")]
+    public float deathDelay = 2f;
     private int currentHealth;
     private bool isDead;
 
     [Header("Tiempos de comportamiento normal")]
-    public float minWaitTime = 1f;
-    public float maxWaitTime = 3f;
+    public float minWaitTime = 1.5f;
+    public float maxWaitTime = 4f;
+    [Tooltip("Probabilidad de sentarse (acción cosmética, sin moverse) en vez de caminar, mientras está en reposo.")]
+    [Range(0f, 1f)] public float idleActionChance = 0.4f;
 
     [Header("Detección de persecución")]
     public float chaseDistance = 5f;
-    [Tooltip("Debe cubrir la distancia de una casilla adyacente (normalmente ~1), ya que el player bloquea el movimiento y la serpiente nunca puede acercarse más que eso.")]
+    [Tooltip("Debe cubrir la distancia de una casilla adyacente (normalmente ~1), ya que el player bloquea el movimiento y el slime nunca puede acercarse más que eso.")]
     public float catchDistance = 1.1f;
-    public int chaseSteps = 5;
+    public int chaseSteps = 6;
     public float chaseStepDelay = 0.05f;
 
-    [Header("Velocidad al perseguir")]
-    [Tooltip("Multiplica el moveTime del GridMover durante la persecución. Menor a 1 = más rápida.")]
-    public float chaseMoveTimeMultiplier = 0.7f;
-
     [Header("Daño por contacto")]
-    public int contactDamage = 10;
+    public int contactDamage = 6;
     public float damageCooldown = 1f;
+    [Tooltip("Tiempo que dura la animación Slime_Atack1 antes de poder volver a atacar/moverse.")]
+    public float attackAnimTime = 0.4f;
 
     [Header("Reacción al recibir golpe")]
-    public float damagedPauseTime = 0.2f; // pausa la IA justo después del golpe
+    public float damagedPauseTime = 0.2f;
 
-    private GridMoverSnake mover;
+    private GridMoverSlime mover;
     private float lastDamageTime = -999f;
     private bool isDamaged;
+    private bool isAttacking;
     private Coroutine behaviourCoroutine;
     private Collider2D[] ownColliders;
 
@@ -50,7 +52,7 @@ public class SnakeIA : MonoBehaviour
             if (playerObject != null)
                 player = playerObject.transform;
             else
-                Debug.LogWarning("SnakeIA: No se encontró ningún objeto con el Tag Player.");
+                Debug.LogWarning("SlimeIA: No se encontró ningún objeto con el Tag Player.");
         }
 
         ownColliders = GetComponentsInChildren<Collider2D>();
@@ -58,7 +60,7 @@ public class SnakeIA : MonoBehaviour
 
     void Start()
     {
-        mover = GetComponent<GridMoverSnake>();
+        mover = GetComponent<GridMoverSlime>();
         currentHealth = maxHealth;
         behaviourCoroutine = StartCoroutine(BehaviourRoutine());
     }
@@ -67,7 +69,7 @@ public class SnakeIA : MonoBehaviour
     {
         while (true)
         {
-            if (isDamaged)
+            if (isDamaged || isAttacking)
             {
                 yield return null;
                 continue;
@@ -77,35 +79,54 @@ public class SnakeIA : MonoBehaviour
                 ? Vector2.Distance(transform.position, player.position)
                 : Mathf.Infinity;
 
+            // --- Ataque por contacto ---
             if (distToPlayer <= catchDistance)
             {
-                TryDealContactDamage();
-                yield return null;
+                yield return StartCoroutine(AttackRoutine());
                 continue;
             }
 
+            // --- Persecución caminando (más rápido) ---
             if (distToPlayer < chaseDistance)
             {
                 yield return StartCoroutine(ChaseRoutine());
                 continue;
             }
 
+            // --- Comportamiento de reposo: esperar, sentarse o caminar en una dirección aleatoria ---
             float wait = Random.Range(minWaitTime, maxWaitTime);
             yield return new WaitForSeconds(wait);
             if (mover.IsMoving) continue;
 
-            if (Random.value < 0.5f)
+            if (Random.value < idleActionChance)
+            {
+                // Acción puramente cosmética: se sienta, sin moverse.
+                mover.PlaySit();
+                yield return new WaitForSeconds(0.8f);
+                mover.PlayIdle();
+            }
+            else if (Random.value < 0.6f)
             {
                 Direction randomDir = (Direction)Random.Range(0, 4);
-                mover.TryMove(randomDir);
+                mover.TryMove(randomDir, running: false); // camina (Slime_Walk)
             }
         }
     }
 
+    IEnumerator AttackRoutine()
+    {
+        isAttacking = true;
+        mover.PlayAttack();
+
+        TryDealContactDamage();
+
+        yield return new WaitForSeconds(attackAnimTime);
+        isAttacking = false;
+        mover.PlayIdle();
+    }
+
     void TryDealContactDamage()
     {
-        // Se mantiene solo como intento adicional por distancia (respaldo).
-        // La forma principal y confiable de detectar contacto es OnTriggerEnter2D/Stay2D más abajo.
         if (player == null) return;
 
         float dist = Vector2.Distance(transform.position, player.position);
@@ -118,11 +139,9 @@ public class SnakeIA : MonoBehaviour
         DealDamageTo(ph);
     }
 
-    // --- Detección real de contacto por colisión (igual de confiable que AttackHitbox) ---
-    // IMPORTANTE: agregá un Collider2D (ej. CircleCollider2D, radio ~0.55) directamente
-    // en este mismo GameObject (el que tiene SnakeIA), marcado como "Is Trigger".
-    // No hace falta Rigidbody2D en la serpiente: el Player ya tiene uno y con eso alcanza
-    // para que Unity dispare los eventos de trigger.
+    // --- Detección real de contacto por colisión ---
+    // IMPORTANTE: agregá un Collider2D (ej. CircleCollider2D, radio ~0.5) directamente
+    // en este mismo GameObject (el que tiene SlimeIA), marcado como "Is Trigger".
     void OnTriggerEnter2D(Collider2D other) => TryContactDamageFromCollider(other);
     void OnTriggerStay2D(Collider2D other) => TryContactDamageFromCollider(other);
 
@@ -149,7 +168,7 @@ public class SnakeIA : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("SnakeIA: El Player no tiene un componente PlayerHealth.");
+            Debug.LogWarning("SlimeIA: El Player no tiene un componente PlayerHealth.");
         }
     }
 
@@ -158,7 +177,6 @@ public class SnakeIA : MonoBehaviour
     {
         ReceiveDamage(amount, player);
     }
-
     public void ReceiveDamage(int amount, Transform source)
     {
         if (isDead) return;
@@ -170,7 +188,10 @@ public class SnakeIA : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Die();
+            isDead = true; // marcamos ya acá para bloquear todo lo demás
+            if (behaviourCoroutine != null)
+                StopCoroutine(behaviourCoroutine); // solo detiene el comportamiento normal
+            StartCoroutine(Die());
             return;
         }
 
@@ -178,20 +199,21 @@ public class SnakeIA : MonoBehaviour
             StartCoroutine(DamagedFlow());
     }
 
-    void Die()
+    IEnumerator Die()
     {
-        if (isDead) return;
-        isDead = true;
-
-        // Detiene todo comportamiento y evita más daño/colisiones
-        StopAllCoroutines();
         foreach (var col in ownColliders)
             col.enabled = false;
 
-        // Si querés reproducir una animación de muerte antes de destruir,
-        // este es el lugar para hacerlo (ej: animator.Play("Snake_Die")).
+        mover.PlayDie();
 
-        Destroy(gameObject, deathDelay);
+        // Espera la duración REAL del clip Slime_Dead (leída desde el Animator).
+        // Así el objeto se destruye justo cuando termina de reproducirse por
+        // primera vez, sin importar si "Loop Time" quedó tildado en el clip.
+        // Si por algún motivo no se pudo encontrar el clip, usa deathDelay como respaldo.
+        float clipLength = mover.GetClipLength(mover.animDie);
+        yield return new WaitForSeconds(clipLength > 0f ? clipLength : deathDelay);
+
+        Destroy(gameObject);
     }
 
     IEnumerator DamagedFlow()
@@ -215,9 +237,8 @@ public class SnakeIA : MonoBehaviour
 
     IEnumerator ChaseRoutine()
     {
-        float originalMoveTime = mover.moveTime;
-        mover.moveTime = originalMoveTime * chaseMoveTimeMultiplier;
-
+        // TryMove(dir, running: true) usa automáticamente runSpeedMultiplier dentro de GridMoverSlime,
+        // reproduciendo siempre Slime_Walk pero a mayor velocidad.
         for (int i = 0; i < chaseSteps; i++)
         {
             if (player == null) break;
@@ -228,7 +249,7 @@ public class SnakeIA : MonoBehaviour
             bool moved = false;
             foreach (Direction dir in GetChaseDirectionsOrdered())
             {
-                if (mover.TryMove(dir))
+                if (mover.TryMove(dir, running: true))
                 {
                     moved = true;
                     break;
@@ -245,8 +266,6 @@ public class SnakeIA : MonoBehaviour
                 yield return new WaitForSeconds(0.2f);
             }
         }
-
-        mover.moveTime = originalMoveTime;
     }
 
     List<Direction> GetChaseDirectionsOrdered()

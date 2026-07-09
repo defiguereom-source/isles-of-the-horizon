@@ -8,6 +8,8 @@ public class GridMoverSnake : MonoBehaviour
 
     [Header("Knockback")]
     public float knockbackTime = 0.15f;
+    [Tooltip("Altura del saltito visual durante el knockback.")]
+    public float knockbackHopHeight = 0.15f;
 
     private Animator animator;
     private SpriteRenderer spriteRenderer;
@@ -63,7 +65,7 @@ public class GridMoverSnake : MonoBehaviour
         return true;
     }
 
-    // --- NUEVO: knockback al recibir un golpe ---
+    // --- Knockback al recibir un golpe, con saltito visual ---
     public void Knockback(Direction dir)
     {
         Vector2 offset = DirToVector(dir);
@@ -89,6 +91,7 @@ public class GridMoverSnake : MonoBehaviour
 
         Vector3 start = transform.position;
         float t = 0f;
+        Vector3 spriteBasePos = spriteRenderer != null ? spriteRenderer.transform.localPosition : Vector3.zero;
 
         while (t < 1f)
         {
@@ -99,12 +102,25 @@ public class GridMoverSnake : MonoBehaviour
             }
 
             t += Time.deltaTime / knockbackTime;
-            transform.position = Vector3.Lerp(start, target, t);
+            float clampedT = Mathf.Clamp01(t);
+            transform.position = Vector3.Lerp(start, target, clampedT);
+
+            // Saltito: arco con seno, sube y vuelve a bajar durante el movimiento
+            if (spriteRenderer != null)
+            {
+                float hop = Mathf.Sin(clampedT * Mathf.PI) * knockbackHopHeight;
+                spriteRenderer.transform.localPosition = spriteBasePos + new Vector3(0f, hop, 0f);
+            }
+
             yield return null;
         }
 
         if (t >= 1f)
             transform.position = target;
+
+        // Asegura que el sprite vuelva a su posición base al terminar el salto
+        if (spriteRenderer != null)
+            spriteRenderer.transform.localPosition = spriteBasePos;
 
         isMoving = false;
 

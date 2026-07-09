@@ -20,7 +20,7 @@ public class GridMoverOrc : MonoBehaviour
     [SerializeField] private WeaponVisibility weaponVisibility;
 
     [Header("Muerte")]
-    public float destroyDelay = 1.5f;       // ← NUEVO: segundos tras la animación de muerte
+    public float destroyDelay = 1.5f;     
 
     void Awake()
     {
