@@ -22,6 +22,18 @@ public class FroggyIA : MonoBehaviour
     public int attackDamage = 15;
     public float atackDuration = 0.8f;
 
+    [Header("Invocación de ranas (solo Fase 2)")]
+    [Tooltip("Prefab de la rana chica a invocar (el que tiene FrogIA + GridMoverFrog).")]
+    public GameObject frogPrefab;
+    [Tooltip("Cuántas ranas invoca en cada ataque de fase 2.")]
+    public int frogsPerSummon = 1;
+    [Tooltip("Radio alrededor de Froggy en el que aparecen las ranas invocadas.")]
+    public float summonRadius = 3f;
+    [Tooltip("Capas que se consideran obstáculo para no invocar ranas dentro de paredes. Dejalo vacío (Nothing) si no querés chequeo.")]
+    public LayerMask summonObstacleMask;
+    [Tooltip("Cuántos intentos hace como máximo para encontrar un punto libre por cada rana antes de rendirse.")]
+    public int summonPlacementAttempts = 10;
+
     [Header("Descanso (fase Froggy_Idle)")]
     public float restDuration = 3f;
 
@@ -133,6 +145,48 @@ public class FroggyIA : MonoBehaviour
 
         float duration = atackDuration / speedMult;
         yield return StartCoroutine(mover.PlayAttackRoutine(duration, speedMult, player, CheckAttackHit));
+
+        // --- Invocación de ranas: en CADA ataque, pero solo si ya está en fase 2 ---
+        if (!IsPhaseOne && currentHealth > 0)
+            SummonFrogs();
+    }
+
+    private void SummonFrogs()
+    {
+        if (frogPrefab == null)
+        {
+            Debug.LogWarning("FroggyIA: frogPrefab no está asignado, no se pueden invocar ranas.");
+            return;
+        }
+
+        for (int i = 0; i < frogsPerSummon; i++)
+        {
+            Vector3 spawnPos = GetFreeSummonPosition();
+            Instantiate(frogPrefab, spawnPos, Quaternion.identity);
+        }
+    }
+
+    // Busca un punto libre alrededor de Froggy (dentro de summonRadius) que no
+    // caiga sobre un obstáculo. Si no encuentra ninguno tras varios intentos,
+    // usa el último punto probado igual (mejor invocar algo mal ubicado que nada).
+    private Vector3 GetFreeSummonPosition()
+    {
+        Vector3 candidate = transform.position;
+
+        for (int attempt = 0; attempt < summonPlacementAttempts; attempt++)
+        {
+            Vector2 randomOffset = Random.insideUnitCircle.normalized * summonRadius;
+            candidate = transform.position + (Vector3)randomOffset;
+
+            if (summonObstacleMask.value == 0)
+                break; // no se configuró máscara de obstáculos, no hay chequeo que hacer
+
+            bool blocked = Physics2D.OverlapCircle(candidate, 0.3f, summonObstacleMask);
+            if (!blocked)
+                break;
+        }
+
+        return candidate;
     }
 
     private IEnumerator RestPhase()
@@ -195,5 +249,8 @@ public class FroggyIA : MonoBehaviour
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(AttackCenter, attackRadius);
+
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireSphere(transform.position, summonRadius);
     }
 }
