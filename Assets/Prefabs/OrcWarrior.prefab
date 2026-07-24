@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3379436232717767925}
   m_Layer: 3
   m_Name: OrcWarrior
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -155,9 +155,10 @@ MonoBehaviour:
   catchDistance: 0.6
   chaseSteps: 5
   chaseStepDelay: 0.05
-  attackRange: 0.9
+  attackRange: 1.5
   attackCooldown: 1
-  maxHealth: 3
+  attackDamage: 60
+  maxHealth: 120
 --- !u!61 &3379436232717767925
 BoxCollider2D:
   m_ObjectHideFlags: 0

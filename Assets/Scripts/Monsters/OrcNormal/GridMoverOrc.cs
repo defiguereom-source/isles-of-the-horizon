@@ -19,12 +19,13 @@ public class GridMoverOrc : MonoBehaviour
     [Header("Referencia al control de arma")]
     [SerializeField] private WeaponVisibility weaponVisibility;
 
+    [Header("Muerte")]
+    public float destroyDelay = 1.5f;     
+
     void Awake()
     {
         animator = GetComponentInChildren<Animator>();
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
-
-        // Guarda todos los colliders del Orc y de sus hijos.
         ownColliders = GetComponentsInChildren<Collider2D>();
 
         if (animator == null)
@@ -80,18 +81,14 @@ public class GridMoverOrc : MonoBehaviour
 
         foreach (Collider2D hit in hits)
         {
-            bool isOwnCollider = false;
+            bool isOwn = false;
 
-            foreach (Collider2D ownCollider in ownColliders)
+            foreach (Collider2D own in ownColliders)
             {
-                if (hit == ownCollider)
-                {
-                    isOwnCollider = true;
-                    break;
-                }
+                if (hit == own) { isOwn = true; break; }
             }
 
-            if (!isOwnCollider)
+            if (!isOwn)
                 return hit;
         }
 
@@ -108,10 +105,8 @@ public class GridMoverOrc : MonoBehaviour
         if (animator != null)
             animator.Play(moveAnim, 0, 0f);
 
-        if (isChasing)
-            weaponVisibility?.HideWeapon();
-        else
-            weaponVisibility?.ShowWeapon();
+        if (isChasing) weaponVisibility?.HideWeapon();
+        else weaponVisibility?.ShowWeapon();
 
         Vector3 start = transform.position;
         float t = 0f;
@@ -133,14 +128,12 @@ public class GridMoverOrc : MonoBehaviour
             if (animator != null)
             {
                 AnimatorStateInfo stateInfo = animator.GetCurrentAnimatorStateInfo(0);
-
                 if (!stateInfo.IsName(moveAnim))
                     animator.Play(moveAnim, 0, 0f);
             }
 
             t += Time.deltaTime / moveTime;
             transform.position = Vector3.Lerp(start, target, t);
-
             yield return null;
         }
 
@@ -150,10 +143,8 @@ public class GridMoverOrc : MonoBehaviour
         if (animator != null)
             animator.Play("OrcNormal_Idle", 0, 0f);
 
-        if (isChasing)
-            weaponVisibility?.HideWeapon();
-        else
-            weaponVisibility?.ShowWeapon();
+        if (isChasing) weaponVisibility?.HideWeapon();
+        else weaponVisibility?.ShowWeapon();
     }
 
     void OnCollisionEnter2D(Collision2D collision)
@@ -181,7 +172,7 @@ public class GridMoverOrc : MonoBehaviour
         weaponVisibility?.ShowWeapon();
 
         if (animator != null)
-            animator.Play("OrcNormal_Attack", 0, 0f);
+            animator.Play("OrcNormal_Atack", 0, 0f);
 
         yield return null;
 
@@ -212,6 +203,15 @@ public class GridMoverOrc : MonoBehaviour
         isDead = true;
         isMoving = true;
 
+        // ── NUEVO: deshabilitar todos los colliders inmediatamente ──
+        foreach (Collider2D col in ownColliders)
+            col.enabled = false;
+
+        // ── NUEVO: detener físicas si tiene Rigidbody2D ──
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+            rb.simulated = false;
+
         ApplyFlip(facing);
 
         if (animator != null)
@@ -226,6 +226,11 @@ public class GridMoverOrc : MonoBehaviour
         yield return new WaitForSeconds(clipLength);
 
         weaponVisibility?.HideHandsOnDeath();
+
+        // ── NUEVO: esperar el delay extra y destruir el objeto ──
+        yield return new WaitForSeconds(destroyDelay);
+
+        Destroy(gameObject);
     }
 
     void ApplyFlip(Direction dir)
@@ -233,10 +238,8 @@ public class GridMoverOrc : MonoBehaviour
         if (spriteRenderer == null)
             return;
 
-        if (dir == Direction.Left)
-            spriteRenderer.flipX = true;
-        else if (dir == Direction.Right)
-            spriteRenderer.flipX = false;
+        if (dir == Direction.Left) spriteRenderer.flipX = true;
+        else if (dir == Direction.Right) spriteRenderer.flipX = false;
     }
 
     Vector2 DirToVector(Direction dir) => dir switch
@@ -251,10 +254,7 @@ public class GridMoverOrc : MonoBehaviour
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.cyan;
-
         if (Application.isPlaying)
-        {
             Gizmos.DrawWireSphere(transform.position, 0.2f);
-        }
     }
 }

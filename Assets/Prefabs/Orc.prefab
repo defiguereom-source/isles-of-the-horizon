@@ -290,7 +290,7 @@ GameObject:
   - component: {fileID: 8104806628155836182}
   m_Layer: 3
   m_Name: Orc
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -457,6 +457,7 @@ MonoBehaviour:
     m_Bits: 9
   facing: 1
   weaponVisibility: {fileID: 0}
+  destroyDelay: 1.5
 --- !u!114 &8104806628155836182
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -477,4 +478,7 @@ MonoBehaviour:
   chaseSteps: 5
   chaseStepDelay: 0.05
   attackCooldown: 1
-  maxHealth: 30
+  attackDamage: 20
+  knockbackForce: 4
+  knockbackDuration: 1
+  maxHealth: 100

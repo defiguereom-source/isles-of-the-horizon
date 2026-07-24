@@ -21,6 +21,7 @@ public class OrcWarriorIA : MonoBehaviour
     [Header("Ataque")]
     public float attackRange = 0.9f;
     public float attackCooldown = 1f;
+    public float attackDamage = 60;
 
     [Header("Vida")]
     public int maxHealth = 3;
@@ -43,16 +44,13 @@ public class OrcWarriorIA : MonoBehaviour
 
         currentHealth -= amount;
         if (currentHealth <= 0)
-        {
             Die();
-        }
     }
 
     void Die()
     {
         if (behaviourCoroutine != null) StopCoroutine(behaviourCoroutine);
         mover.PlayDeath();
-        // Opcional: desactivar colliders, destruir tras X segundos, etc.
         Destroy(gameObject, 2f);
     }
 
@@ -66,7 +64,6 @@ public class OrcWarriorIA : MonoBehaviour
                 ? Vector2.Distance(transform.position, player.position)
                 : Mathf.Infinity;
 
-            // Si está en rango de ataque, ataca
             if (distToPlayer <= attackRange)
             {
                 if (Time.time - lastAttackTime >= attackCooldown && !mover.IsMoving)
@@ -74,7 +71,23 @@ public class OrcWarriorIA : MonoBehaviour
                     FaceTowardsPlayer();
                     lastAttackTime = Time.time;
                     bool attackDone = false;
-                    mover.PlayAttack(() => attackDone = true);
+
+                    mover.PlayAttack(() =>
+                    {
+                        attackDone = true;
+
+                        if (player != null)
+                        {
+                            float dist = Vector2.Distance(transform.position, player.position);
+                            if (dist <= attackRange)
+                            {
+                                PlayerHealth health = player.GetComponent<PlayerHealth>();
+                                if (health != null)
+                                    health.TakeDamage((int)attackDamage);
+                            }
+                        }
+                    });
+
                     while (!attackDone) yield return null;
                 }
                 else
@@ -84,14 +97,12 @@ public class OrcWarriorIA : MonoBehaviour
                 continue;
             }
 
-            // Si está dentro de rango de persecución, persigue
             if (distToPlayer < chaseDistance)
             {
                 yield return StartCoroutine(ChaseRoutine());
                 continue;
             }
 
-            // Comportamiento idle/random
             float wait = Random.Range(minWaitTime, maxWaitTime);
             yield return new WaitForSeconds(wait);
 
@@ -112,7 +123,7 @@ public class OrcWarriorIA : MonoBehaviour
             if (player == null || mover.IsDead) break;
 
             float dist = Vector2.Distance(transform.position, player.position);
-            if (dist <= attackRange) break; // dejar que BehaviourRoutine maneje el ataque
+            if (dist <= attackRange) break;
             if (dist > chaseDistance) break;
 
             bool moved = false;
@@ -172,13 +183,7 @@ public class OrcWarriorIA : MonoBehaviour
             secondary = toward.x > 0 ? Direction.Right : Direction.Left;
         }
 
-        return new List<Direction>
-        {
-            primary,
-            secondary,
-            Opposite(secondary),
-            Opposite(primary)
-        };
+        return new List<Direction> { primary, secondary, Opposite(secondary), Opposite(primary) };
     }
 
     Direction Opposite(Direction d) => d switch
