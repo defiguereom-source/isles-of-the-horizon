@@ -30,5 +30,10 @@ public class SalidaInterior : MonoBehaviour
         Invoke("ResetCooldown", 0.5f);
     }
 
+    void OnEnable()
+    {
+        enCooldown = false;
+    }
+
     void ResetCooldown() => enCooldown = false;
 }

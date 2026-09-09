@@ -11,6 +11,7 @@ public class Objecto : MonoBehaviour
     [SerializeField] Button botonComprar;
 
     private int precio;
+    private Tienda datos;
     private Equipo equipo;
 
     private void Awake()
@@ -28,6 +29,7 @@ public class Objecto : MonoBehaviour
 
     public void CrearObject(Tienda datosObject)
     {
+        datos = datosObject;
         precio = datosObject.PrecioObject;
         imagenObject.sprite = datosObject.imagenObject;
         textObject.text = datosObject.textObject;
@@ -41,6 +43,6 @@ public class Objecto : MonoBehaviour
             Debug.LogWarning("Equipo no asignado en Objecto.");
             return;
         }
-        equipo.IncluirEquipo(precio, imagenObject);
+        equipo.IncluirEquipo(precio, datos);
     }
 }

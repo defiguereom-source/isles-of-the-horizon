@@ -15,3 +15,5 @@ MonoBehaviour:
   imagenObject: {fileID: -545096398, guid: 6111e0efcf94f2347a93bb1fa7bc3912, type: 3}
   textObject: Pocion
   PrecioObject: 10
+  esConsumible: 1
+  curacion: 60

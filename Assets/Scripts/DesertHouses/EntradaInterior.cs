@@ -10,7 +10,12 @@ public class EntradaInterior : MonoBehaviour
     public Transform puntoEntrada;
 
     private Transform playerRef;
-    private bool enCooldown = false; // ← ya NO es static
+    private bool enCooldown = false;
+
+    void OnEnable()
+    {
+        enCooldown = false;
+    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -27,8 +32,5 @@ public class EntradaInterior : MonoBehaviour
         exteriorGeneral.SetActive(false);
         interiorEspecifico.SetActive(true);
         playerRef.position = puntoEntrada.position;
-        Invoke("ResetCooldown", 1f); // 1f para entrar
     }
-
-    void ResetCooldown() => enCooldown = false;
 }

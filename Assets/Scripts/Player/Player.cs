@@ -115,11 +115,6 @@ public class Player : MonoBehaviour
         {
             StartCoroutine(AttackRoutine());
         }
-
-        if (Keyboard.current.kKey.wasPressedThisFrame)
-        {
-            Die();
-        }
     }
 
     private void UpdateAnimation()
@@ -234,6 +229,18 @@ public class Player : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
 
         anim.Play("player_die", 0, 0f);
+
+        StartCoroutine(GameOverConRetraso(1.5f));
+    }
+
+    private System.Collections.IEnumerator GameOverConRetraso(float segundos)
+    {
+        yield return new WaitForSeconds(segundos);
+
+        if (GameManager.Instance != null)
+        {
+            GameManager.Instance.GameOver();
+        }
     }
 
     private void Play(int stateHash)

@@ -15,17 +15,35 @@ public class Equipo : MonoBehaviour
         textDinero.text = dineroTotal.ToString();
     }
 
-    public void IncluirEquipo(int dinero, Image imagenEquipo)
+    public void IncluirEquipo(int dinero, Tienda datosObject)
     {
         if (dinero <= dineroTotal && numeroMaximoObjetos <= 4)
         {
             dineroTotal -= dinero;
             numeroMaximoObjetos++;
-            GameObject equipo = GameObject.Instantiate(objetoDeEquipo, Vector2.zero, Quaternion.identity, GameObject.FindGameObjectWithTag("Tienda").transform);
-            Image imagen = equipo.GetComponent<Image>();
-            imagen.sprite = imagenEquipo.sprite;
-            textDinero.text = dineroTotal.ToString();
 
+            GameObject equipoInstanciado = GameObject.Instantiate(
+                objetoDeEquipo,
+                Vector2.zero,
+                Quaternion.identity,
+                GameObject.FindGameObjectWithTag("Tienda").transform
+            );
+
+            Image imagen = equipoInstanciado.GetComponent<Image>();
+            imagen.sprite = datosObject.imagenObject;
+
+            ItemInventario item = equipoInstanciado.GetComponent<ItemInventario>();
+            if (item == null)
+                item = equipoInstanciado.AddComponent<ItemInventario>();
+
+            item.Configurar(datosObject, this);
+
+            textDinero.text = dineroTotal.ToString();
         }
+    }
+
+    public void RemoverObjeto()
+    {
+        numeroMaximoObjetos = Mathf.Max(0, numeroMaximoObjetos - 1);
     }
 }
