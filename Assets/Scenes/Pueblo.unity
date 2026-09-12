@@ -520,7 +520,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -4051,7 +4051,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -6542,7 +6542,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -6869,7 +6869,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &285878266
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6926,6 +6926,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!1 &292329982
 GameObject:
   m_ObjectHideFlags: 0
@@ -7508,7 +7509,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02a5f73f1fdaf7341b72ad5aae213864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  dineroTotal: 25
   textDinero: {fileID: 1285763478}
   objetoDeEquipo: {fileID: 5023883129280358118, guid: d3d94b0f662d8ee4f827218be91b885e, type: 3}
 --- !u!1 &365843118
@@ -12575,10 +12575,8 @@ MonoBehaviour:
   - '...
 
     Eres un Player? Necesito tu ayuda.'
-  - "Mi nieto salio esta ma\xF1ana hacia el bosque... y aun no ha regresado. He esperado
-    durante horas, pero tengo un mal presentimiento."
-  - Te lo ruego... encuentralo y traelo de vuelta. Es lo unico que me queda en este
-    mundo. Hare todo lo que este a mi alcance para agradecerte
+  - "Mi nieto salio esta ma\xF1ana hacia el bosque... y aun no ha regresado. He esperado durante horas, pero tengo un mal presentimiento."
+  - Te lo ruego... encuentralo y traelo de vuelta. Es lo unico que me queda en este mundo. Hare todo lo que este a mi alcance para agradecerte
   secondaryDialogs:
   - name: 1er
     lines:
@@ -12587,7 +12585,7 @@ MonoBehaviour:
   interactionCooldown: 2
 --- !u!212 &596133899
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -12644,6 +12642,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!95 &596133900
 Animator:
   serializedVersion: 7
@@ -12711,15 +12710,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ComponentVersion: 2
+  m_ComponentVersion: 4
   m_LightType: 4
   m_BlendStyleIndex: 0
+  m_Light2DProvider:
+    rid: -2
+  m_SelectionSources:
+    rid: 3487678657290567680
   m_FalloffIntensity: 0.5
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Intensity: 1
   m_LightVolumeIntensity: 1
   m_LightVolumeEnabled: 0
-  m_ApplyToSortingLayers: 00000000
+  m_ApplyToSortingLayers: 00000000i
   m_LightCookieSprite: {fileID: 0}
   m_DeprecatedPointLightCookieSprite: {fileID: 0}
   m_LightOrder: 0
@@ -12734,6 +12737,9 @@ MonoBehaviour:
   m_ShadowSoftnessFalloffIntensity: 0.5
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
+  m_RenderingLayersMask:
+    serializedVersion: 0
+    m_Bits: 1
   m_LocalBounds:
     m_Center: {x: 0, y: -0.00000011920929, z: 0}
     m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
@@ -12751,6 +12757,19 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 3487678657290567680
+      type: {class: Light2DProviderSources, ns: UnityEngine.Rendering.Universal, asm: Unity.RenderPipelines.Universal.2D.Runtime}
+      data:
+        m_SelectedHashCode: 4
+        m_SelectedSource:
+          rid: -2
+        m_Provider2DCache:
+          rid: -2
 --- !u!4 &619394802
 Transform:
   m_ObjectHideFlags: 0
@@ -71396,7 +71415,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -84190,7 +84209,7 @@ GameObject:
   m_IsActive: 1
 --- !u!212 &858559478
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -84247,6 +84266,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!95 &858559479
 Animator:
   serializedVersion: 7
@@ -86417,7 +86437,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -86503,7 +86523,7 @@ GameObject:
   m_IsActive: 0
 --- !u!212 &967512196
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -86560,6 +86580,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!4 &967512197
 Transform:
   m_ObjectHideFlags: 0
@@ -86682,7 +86703,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -87073,7 +87094,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -87996,7 +88017,7 @@ MonoBehaviour:
   hitboxDuration: 0.15
 --- !u!212 &1089579801
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -88053,6 +88074,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!4 &1089579802
 Transform:
   m_ObjectHideFlags: 0
@@ -105717,7 +105739,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -105854,7 +105876,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -107100,7 +107122,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1299720585
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -107157,6 +107179,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!1 &1302519336
 GameObject:
   m_ObjectHideFlags: 0
@@ -107502,7 +107525,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -108447,7 +108470,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -110410,7 +110433,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -110474,7 +110497,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1634889460
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -110531,6 +110554,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!1 &1669662318
 GameObject:
   m_ObjectHideFlags: 0
@@ -114314,7 +114338,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -114621,7 +114645,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1921417904
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -114678,6 +114702,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!95 &1921417905
 Animator:
   serializedVersion: 7
@@ -114764,10 +114789,8 @@ MonoBehaviour:
   mainDialogLines:
   - Eres el primer Player que veo en mucho tiempo.
   - Espero que nuestro pueblo te haga sentir bienvenido.
-  - Pero ahora necesitamos tu ayuda. Gregory desaparecio en el bosque y nadie ha
-    podido encontrarlo.
-  - Por favor... ya estamos cansados de vivir entre el miedo y las desgracias. Devuelvenos
-    la esperanza y trae a Gregory de vuelta.
+  - Pero ahora necesitamos tu ayuda. Gregory desaparecio en el bosque y nadie ha podido encontrarlo.
+  - Por favor... ya estamos cansados de vivir entre el miedo y las desgracias. Devuelvenos la esperanza y trae a Gregory de vuelta.
   secondaryDialogs:
   - name: 1er
     lines:
@@ -114892,7 +114915,7 @@ GameObject:
   m_IsActive: 1
 --- !u!212 &1961540856
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -114949,6 +114972,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!95 &1961540857
 Animator:
   serializedVersion: 7
@@ -115220,7 +115244,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 0
-  m_ActiveFontFeatures: 6e72656b
+  m_ActiveFontFeatures: 6e72656bu
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -116643,7 +116667,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2014791667
 SpriteRenderer:
-  serializedVersion: 2
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -116700,6 +116724,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+  m_BlendShapeWeights: []
 --- !u!95 &2014791668
 Animator:
   serializedVersion: 7
@@ -116831,20 +116856,15 @@ MonoBehaviour:
   dialogText: {fileID: 1627260540}
   mainDialogLines:
   - Eres el primer Player que veo en mucho tiempo.
-  - Todos sabemos que vienes de una dimension superior. No se como llegaste aqui...
-    pero agradecemos que estes de nuestro lado.
+  - Todos sabemos que vienes de una dimension superior. No se como llegaste aqui... pero agradecemos que estes de nuestro lado.
   - Aqui tienes 25 monedas de oro para que compres algo en la tienda de Nashly.
-  - Hay algo que nunca entendi... Por que la tecla J hace que ataques? Los Players
-    hacen cosas muy extranas.
-  - Todavia no entiendo como funciona, pero si presionas la tecla I, aparecera tu
-    inventario. Los Players hacen cosas realmente extranas.
-  - Ah, y un consejo... no presiones la tecla K. Se que tienes curiosidad, pero nuestro
-    creador dice que todavia es un bug. No queremos que el mundo se rompa otra vez.
+  - Hay algo que nunca entendi... Por que la tecla J hace que ataques? Los Players hacen cosas muy extranas.
+  - Todavia no entiendo como funciona, pero si presionas la tecla I, aparecera tu inventario. Los Players hacen cosas realmente extranas.
+  - Ah, y un consejo... no presiones la tecla K. Se que tienes curiosidad, pero nuestro creador dice que todavia es un bug. No queremos que el mundo se rompa otra vez.
   secondaryDialogs:
   - name: 1er Dialog
     lines:
-    - 'Ve a la tienda de Nashly y comprate lo que quieras despues ve a la herreria
-      de hefesto el te dira que hacer. '
+    - 'Ve a la tienda de Nashly y comprate lo que quieras despues ve a la herreria de hefesto el te dira que hacer. '
   loopSecondaryDialogs: 1
   interactionCooldown: 2
 --- !u!1 &2045451587
@@ -120091,6 +120111,70 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2106347960
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2106347962}
+  - component: {fileID: 2106347961}
+  - component: {fileID: 2106347963}
+  m_Layer: 0
+  m_Name: InventoryData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2106347961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106347960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bfd0122c4fe6419469e811278eeb975f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::InventoryManager
+  dineroTotal: 25
+  itemsInventario: []
+  maxObjetos: 6
+--- !u!4 &2106347962
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106347960}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 239.26941, y: 147.99916, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2106347963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106347960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b241a2700f78bec4bbbacca9817fdd87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CursorManager
+  cursorNormal: {fileID: 2800000, guid: d28ea6c00e2e7a74ca6f33ddc7602456, type: 3}
+  cursorHover: {fileID: 2800000, guid: b8bc18d781fc98444b1015daf8d955c2, type: 3}
+  hotspotNormal: {x: 4, y: 0}
+  hotspotHover: {x: 8, y: 0}
 --- !u!1 &2113408356
 GameObject:
   m_ObjectHideFlags: 0
@@ -120718,3 +120802,4 @@ SceneRoots:
   - {fileID: 1160073938}
   - {fileID: 1669662321}
   - {fileID: 486765563}
+  - {fileID: 2106347962}
