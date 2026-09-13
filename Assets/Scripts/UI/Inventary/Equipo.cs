@@ -4,28 +4,55 @@ using TMPro;
 
 public class Equipo : MonoBehaviour
 {
-    [SerializeField] private int dineroTotal = 0;
     [SerializeField] TextMeshProUGUI textDinero;
     [SerializeField] GameObject objetoDeEquipo;
 
-    private int numeroMaximoObjetos = 0;
-
     void Start()
     {
-        textDinero.text = dineroTotal.ToString();
+        ActualizarUI();
     }
 
-    public void IncluirEquipo(int dinero, Image imagenEquipo)
+    public void IncluirEquipo(int dinero, Tienda datosObject)
     {
-        if (dinero <= dineroTotal && numeroMaximoObjetos <= 4)
+        if (InventoryManager.Instance.AgregarItem(datosObject, dinero))
         {
-            dineroTotal -= dinero;
-            numeroMaximoObjetos++;
-            GameObject equipo = GameObject.Instantiate(objetoDeEquipo, Vector2.zero, Quaternion.identity, GameObject.FindGameObjectWithTag("Tienda").transform);
-            Image imagen = equipo.GetComponent<Image>();
-            imagen.sprite = imagenEquipo.sprite;
-            textDinero.text = dineroTotal.ToString();
+            InstanciarItem(datosObject);
+            textDinero.text = InventoryManager.Instance.dineroTotal.ToString();
+        }
+    }
 
+    public void RemoverObjeto(Tienda datosObject)
+    {
+        InventoryManager.Instance.RemoverItem(datosObject);
+    }
+
+    private void InstanciarItem(Tienda datosObject)
+    {
+        GameObject equipoInstanciado = Instantiate(
+            objetoDeEquipo,
+            Vector2.zero,
+            Quaternion.identity,
+            GameObject.FindGameObjectWithTag("Tienda").transform
+        );
+
+        Image imagen = equipoInstanciado.GetComponent<Image>();
+        imagen.sprite = datosObject.imagenObject;
+
+        ItemInventario item = equipoInstanciado.GetComponent<ItemInventario>();
+        if (item == null)
+            item = equipoInstanciado.AddComponent<ItemInventario>();
+
+        item.Configurar(datosObject, this);
+    }
+
+    private void ActualizarUI()
+    {
+        textDinero.text = InventoryManager.Instance.dineroTotal.ToString();
+
+        // reconstruye los iconos que ya tenías comprados
+        foreach (Tienda item in InventoryManager.Instance.itemsInventario)
+        {
+            InstanciarItem(item);
         }
     }
 }

@@ -15,3 +15,5 @@ MonoBehaviour:
   imagenObject: {fileID: -5291069566441355259, guid: 979ced1d807173445b2c3e53bf56798a, type: 3}
   textObject: Agua
   PrecioObject: 1
+  esConsumible: 1
+  curacion: 10
