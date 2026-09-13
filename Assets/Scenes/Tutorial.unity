@@ -88088,6 +88088,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Slime
       objectReference: {fileID: 0}
+    - target: {fileID: 8193495330184538848, guid: 4d3eca96e2aac0940b8a4c6787acacf1, type: 3}
+      propertyPath: m_Size.x
+      value: 0.97076416
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193495330184538848, guid: 4d3eca96e2aac0940b8a4c6787acacf1, type: 3}
+      propertyPath: m_Size.y
+      value: 0.75457764
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193495330184538848, guid: 4d3eca96e2aac0940b8a4c6787acacf1, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.007537842
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193495330184538848, guid: 4d3eca96e2aac0940b8a4c6787acacf1, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0022888184
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -88112,6 +88128,22 @@ PrefabInstance:
     - target: {fileID: 1528332982107054908, guid: 5cdea4fc01b78a244a4c7f78b8c3a0f1, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1783648522036500101, guid: 5cdea4fc01b78a244a4c7f78b8c3a0f1, type: 3}
+      propertyPath: m_Size.x
+      value: 0.8824463
+      objectReference: {fileID: 0}
+    - target: {fileID: 1783648522036500101, guid: 5cdea4fc01b78a244a4c7f78b8c3a0f1, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6848755
+      objectReference: {fileID: 0}
+    - target: {fileID: 1783648522036500101, guid: 5cdea4fc01b78a244a4c7f78b8c3a0f1, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.008483887
+      objectReference: {fileID: 0}
+    - target: {fileID: 1783648522036500101, guid: 5cdea4fc01b78a244a4c7f78b8c3a0f1, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.025177002
       objectReference: {fileID: 0}
     - target: {fileID: 3780562077224024403, guid: 5cdea4fc01b78a244a4c7f78b8c3a0f1, type: 3}
       propertyPath: cellSize
@@ -88221,6 +88253,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 100674251}
     m_Modifications:
+    - target: {fileID: 1075120941115033204, guid: 3803b65b6d84db745b6774621e04e58a, type: 3}
+      propertyPath: m_Size.x
+      value: 1.0300064
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075120941115033204, guid: 3803b65b6d84db745b6774621e04e58a, type: 3}
+      propertyPath: m_Size.y
+      value: 1.0483186
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075120941115033204, guid: 3803b65b6d84db745b6774621e04e58a, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.0505625
+      objectReference: {fileID: 0}
+    - target: {fileID: 1075120941115033204, guid: 3803b65b6d84db745b6774621e04e58a, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.024159282
+      objectReference: {fileID: 0}
     - target: {fileID: 5617868465685429720, guid: 3803b65b6d84db745b6774621e04e58a, type: 3}
       propertyPath: m_SortingOrder
       value: 2
@@ -88243,7 +88291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6009527146658451559, guid: 3803b65b6d84db745b6774621e04e58a, type: 3}
       propertyPath: contactDamage
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6009527146658451559, guid: 3803b65b6d84db745b6774621e04e58a, type: 3}
       propertyPath: damageCooldown
