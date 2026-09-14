@@ -1,19 +1,16 @@
-using System;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class MenuSystem : MonoBehaviour
 {
+    [SerializeField] private string escenaJugar = "Pueblo";
 
     public void Jugar()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        CargarNivel.NivelCarga(escenaJugar);
     }
 
     public void Salir()
     {
         Application.Quit();
-        Debug.Log("Saliste del Juego");
-
     }
 }
