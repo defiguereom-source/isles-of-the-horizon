@@ -5,12 +5,14 @@ public class ItemInventario : MonoBehaviour, IPointerClickHandler
 {
     private bool esConsumible;
     private int curacion;
+    private Tienda datos;
     private Equipo equipo;
 
-    public void Configurar(Tienda datos, Equipo equipoRef)
+    public void Configurar(Tienda datosObject, Equipo equipoRef)
     {
-        esConsumible = datos.esConsumible;
-        curacion = datos.curacion;
+        datos = datosObject;
+        esConsumible = datosObject.esConsumible;
+        curacion = datosObject.curacion;
         equipo = equipoRef;
     }
 
@@ -22,7 +24,7 @@ public class ItemInventario : MonoBehaviour, IPointerClickHandler
         PlayerHealth.Instance.Heal(curacion);
 
         if (equipo != null)
-            equipo.RemoverObjeto();
+            equipo.RemoverObjeto(datos);
 
         Destroy(gameObject);
     }

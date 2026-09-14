@@ -10,7 +10,7 @@ public class SceneDoor : MonoBehaviour
     {
         if (other.CompareTag(playerTag))
         {
-            SceneManager.LoadScene(sceneToLoad);
+            CargarNivel.NivelCarga(sceneToLoad);
         }
     }
 }

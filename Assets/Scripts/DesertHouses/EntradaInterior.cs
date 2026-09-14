@@ -12,17 +12,20 @@ public class EntradaInterior : MonoBehaviour
     private Transform playerRef;
     private bool enCooldown = false;
 
-    void OnEnable()
-    {
-        enCooldown = false;
-    }
-
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player") && !enCooldown)
         {
             playerRef = other.transform;
             Entrar();
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            enCooldown = false;
         }
     }
 
