@@ -21,7 +21,19 @@ MonoBehaviour:
   m_ActivePlatformGuid: 
   m_AdditionalPlatformBuildSettings: []
   m_OverrideGlobalSceneList: 1
-  m_Scenes: []
+  m_Scenes:
+  - m_enabled: 1
+    m_path: Assets/Scenes/Menu.unity
+    m_guid: bd8330886069d1148b7e1774e086f8f0
+  - m_enabled: 1
+    m_path: Assets/Scenes/LoadingScene.unity
+    m_guid: fc9aac971cbaa894ebf57c013679c2c8
+  - m_enabled: 1
+    m_path: Assets/Scenes/Pueblo.unity
+    m_guid: 22ee920c34b647247bff387947ac40cf
+  - m_enabled: 1
+    m_path: Assets/Scenes/Tutorial.unity
+    m_guid: 7f92d7391c05e474eb4f2d455b491fe2
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
   m_PlayerSettingsYaml:
