@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 using UnityEngine.InputSystem;
 
@@ -20,6 +21,10 @@ public class GregoryDialog : MonoBehaviour
     [SerializeField] private float missionCompleteDuration = 2.5f;
     [Tooltip("Si está tildado, el panel no se cierra solo: espera a que el jugador presione F.")]
     [SerializeField] private bool waitForInputToClose = false;
+
+    [Header("Siguiente escena")]
+    [Tooltip("Nombre exacto de la escena que se carga al terminar la misión (debe estar en Build Profiles).")]
+    [SerializeField] private string nextSceneName = "Continuara";
 
     private SpriteRenderer spriteRenderer;
     private Collider2D interactionCollider;
@@ -140,8 +145,9 @@ public class GregoryDialog : MonoBehaviour
         if (missionCompletePanel != null)
             missionCompletePanel.SetActive(false);
 
-        // Ahora sí, se puede desactivar todo el GameObject.
-        gameObject.SetActive(false);
+        // En vez de desactivar a Gregory, pasamos a la escena "Continuara".
+        Time.timeScale = 1f; // por si algún sistema pausó el juego
+        SceneManager.LoadScene(nextSceneName);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
